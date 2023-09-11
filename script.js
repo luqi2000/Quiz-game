@@ -2,11 +2,14 @@ const prompt = require("prompt-sync")(); // with this i have the possibility to 
 
 console.log("Welcome to the computer hardware quiz!");
 
-const answer1 = prompt("What is the brain of the computer? "); // so in the console i can write
-const correct_answer1 = "CPU";
+let correctAnswers = 0;
 
-if (answer1.toUpperCase() === correct_answer1) {
+const answer1 = prompt("What is the brain of the computer? "); // so in the console i can write
+const correctAnswer1 = "CPU";
+
+if (answer1.toUpperCase() === correctAnswer1) {
   console.log("you got it correct!");
+  correctAnswers++;
 } else {
   console.log("you got it wrong!");
 }
@@ -14,10 +17,11 @@ if (answer1.toUpperCase() === correct_answer1) {
 //-------------------------------------
 
 const answer2 = prompt("What is better a 3090ti or a 4060? "); // so in the console i can write
-const correct_answer2 = "3090ti";
+const correctAnswer2 = "3090ti";
 
-if (answer2.toLowerCase() === correct_answer2) {
+if (answer2.toLowerCase() === correctAnswer2) {
   console.log("you got it correct!");
+  correctAnswers++;
 } else {
   console.log("you got it wrong!");
 }
@@ -25,10 +29,13 @@ if (answer2.toLowerCase() === correct_answer2) {
 //-------------------------------------
 
 const answer3 = prompt("What is the reccomend amount of Ram in 2023? "); // so in the console i can write
-const correct_answer3 = "16GB";
+const correctAnswer3 = "16GB";
 
-if (answer3.toUpperCase() === correct_answer3) {
+if (answer3.toUpperCase() === correctAnswer3) {
   console.log("you got it correct!");
+  correctAnswers++;
 } else {
   console.log("you got it wrong!");
 }
+
+console.log("You got", correctAnswers, "questions correct!");
