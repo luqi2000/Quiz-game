@@ -3,6 +3,7 @@ const prompt = require("prompt-sync")(); // with this i have the possibility to 
 console.log("Welcome to the computer hardware quiz!");
 
 let correctAnswers = 0;
+const totalQuestions = 3;
 
 const answer1 = prompt("What is the brain of the computer? "); // so in the console i can write
 const correctAnswer1 = "CPU";
@@ -39,3 +40,6 @@ if (answer3.toUpperCase() === correctAnswer3) {
 }
 
 console.log("You got", correctAnswers, "questions correct!");
+
+const percent = Math.round((correctAnswers / totalQuestions) * 100);
+console.log("Your score", percent.toString + "%");
